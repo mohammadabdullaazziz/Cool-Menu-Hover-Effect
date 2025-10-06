@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    background-color: rgb(230, 226, 226);
+}
+/* Header code start */
+nav{
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  padding: 5px 10%;
+}
+
+nav .logo{
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style-type: none;
+    margin: 0 10px;
+    padding: 5px 0;
+    transform-style: preserve-3d;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+} 
+
+nav ul li a span{
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a span::before{
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0; 
+    background: #f30000;
+    color: #fff;
+    padding: 10px 20px;
+    transform-style: preserve-3d;
+    transition: 0.3s;
+    cursor: pointer;
+    transform: rotateX(90deg) translateY(50px);
+    transform-origin: bottom;
+}
+
+nav ul li a span:hover::before{
+    transform: rotateX(0deg) translateY(0px);
+    border-radius: 5px;
+}
+
+nav ul li a span::after{
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0; 
+    background: #fff;
+    color: #262626;
+    padding: 10px 20px;
+    transform-style: preserve-3d;
+    transition: 0.3s;
+    cursor: pointer;
+    transform: rotateX(0deg) translateY(0px);
+    transform-origin: top;
+}
+
+nav ul li a span:hover::after{
+    transform: rotateX(90deg) translateY(-10px);
+    border-radius: 5px;
+}
